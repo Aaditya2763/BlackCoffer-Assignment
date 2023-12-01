@@ -1,0 +1,176 @@
+/* ... Previous CSS styles ... */
+
+.navbar {
+position: sticky;
+top: 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    padding: 10px 0px;
+    background-color: #2f3349;
+    color:#6c61e1;
+    border-bottom: 1px solid grey;
+    z-index: 100;
+    
+  }
+  
+  .title{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .logotitle {
+    font-size: 30px;
+    align-self: center;
+    font-weight: bold;
+  }
+  .logoImg {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+ border-radius: 10px;
+  
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 0px 10px;
+    transition:height 0.3s ease-in; /* Add opacity transition */
+
+  }
+  
+  .nav-link {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+    color: white;
+    margin: 0px 10px;
+    margin-top: 5px;
+ 
+    text-decoration: none;
+   
+
+  }
+  
+
+  /* ... Rest of the CSS ... */
+  
+  
+  .nav-link:hover {
+  
+    color: #6c61e1;
+ 
+   
+  }
+  
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    
+  }
+  
+  .bar {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 3px 10px;
+
+    
+  }
+  .closeBtn{
+    font-size: 2rem;
+    color: red;
+    margin: 3px 0px;
+    cursor: pointer;
+  }
+  
+.open{
+  width: 10vw;
+  height: auto;
+  transition: height  0.5s;
+
+}
+    
+  .icon-box{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: auto;
+   font-size: 1.5rem;
+
+   align-items: center;
+   align-items: center;
+   transition: height  ease-in 0.3s;
+  }
+  
+  .icon-name{
+    font-size: 1.2rem;
+    padding: 0px 0px;
+    
+  }
+  .icons{
+    font-size: 2rem;
+    padding: 0px 10px;
+  }
+  .nav-link-active{
+    color: #6c61e1;
+  text-decoration: underline;
+  }
+  
+  /* Style for responsiveness */
+  @media screen and (max-width: 500px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      height: auto;
+      background-color:#2f3349;
+      position: absolute;
+      top: 65px;
+      left: 0;
+      padding:20px 0px;
+      z-index: 1;
+      flex-direction: column;
+      /* align-items: center; */
+   border-bottom: 1px solid grey
+    ;
+    
+    }
+    .nav-link{
+      text-align: center;
+    }
+    
+    .nav-link:hover {
+      width: 200px;
+      color: white;
+      justify-content: center;
+      background-color: #6c61e1;
+      border-radius: 20px;
+    
+    }
+  
+    .nav-links.open {
+   
+      display: flex;
+      opacity: 1; /* Set opacity to 1 when open */
+     
+   transition: opacity ease-in-out 0.5s;
+      
+    }
+    .nav-link{
+        padding: 16px;
+
+     
+    }
+    
+  
+    .menu-toggle {
+      display: flex;
+    }
+  }
+  
