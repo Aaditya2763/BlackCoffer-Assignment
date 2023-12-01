@@ -16,10 +16,7 @@ connectDB();
 seeddb();
 
 const corsOptions = {
-  origin: 'https://black-coffer-assignment-eight.vercel.app/', // Replace with your allowed origin(s)
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  // credentials: true, // Set to true if you're dealing with cookies or sessions
-  optionsSuccessStatus: 204, // Some legacy browsers (IE11) may not handle 200
+  origin: ["https://black-coffer-assignment-eight.vercel.app/","http://localhost:3000"], // Some legacy browsers (IE11) may not handle 200
 };
 
 app.use(cors(corsOptions));
