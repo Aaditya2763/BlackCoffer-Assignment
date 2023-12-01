@@ -92,7 +92,7 @@ if(!validForm){
             { isTouched && !validPassword(enteredPassword) && <p style={{color:'red'}}>password length can't be less than 5</p>}
             </div>
             { hasError &&  <p style={{color:'red'}}>Enter valid credentials</p>}
-            <button className={classes.submitBtn} onClick={validDataHandler} disabled={hasError} ><Link to="/dashboard" style={{color:'white',textDecoration:'none'}}>Login </Link></button>
+            <Link to="/dashboard" style={{color:'white',textDecoration:'none'}}> <button className={classes.submitBtn} onClick={validDataHandler} disabled={hasError} >Login </button></Link>
             <p  style={{color:'white'}}>Or</p>
               
     <div className={classes.signupOtions}>

@@ -28,8 +28,7 @@ const [city,setCity]=useState([]);
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
    
-  };
-  
+  };  
   useEffect(() => {
    //we are getting array of objects  that is why first we will map it to get array of years
    const yeardata=dropboxdata.map(years=>years.added)
