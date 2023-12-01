@@ -7,8 +7,8 @@ import {IoLogoFacebook} from 'react-icons/io'
 const LoginPage = () => {
 
 
-  const[enteredEmail,setenteredEmail]=useState('')
-  const[enteredPassword,setenteredPassword]=useState('')
+  const[enteredEmail,setenteredEmail]=useState('admin@gmail.com')
+  const[enteredPassword,setenteredPassword]=useState('Admin@123')
   const[hasError,sethasError]=useState(false);
   const[isTouched,setisTouched]=useState(false)
   
@@ -71,6 +71,7 @@ if(!validForm){
             <span className={classes.inputtitle}>email</span>
             <input
             placeholder='Email'
+            value={enteredEmail}
             className={classes.inputBox}
             onChange={emailChangeHandler}
             onBlur={emailBlurHandler}
@@ -83,13 +84,15 @@ if(!validForm){
             <input
             className={classes.inputBox}
             placeholder='Password'
+            value={enteredPassword}
+            type='password'
             onChange={passwordChangeHandler}
             onBlur={PasswordBlurHandler}
             />
             { isTouched && !validPassword(enteredPassword) && <p style={{color:'red'}}>password length can't be less than 5</p>}
             </div>
             { hasError &&  <p style={{color:'red'}}>Enter valid credentials</p>}
-            <button className={classes.submitBtn} onClick={validDataHandler} disabled={hasError} >Login</button>
+            <button className={classes.submitBtn} onClick={validDataHandler} disabled={hasError} ><Link to="/dashboard" style={{color:'white',textDecoration:'none'}}>Login </Link></button>
             <p  style={{color:'white'}}>Or</p>
               
     <div className={classes.signupOtions}>

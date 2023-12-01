@@ -65,7 +65,8 @@ const App = () => {
       <Navbar />
       <div>
       <Routes>
-        <Route path="/" element={<Dashboard data={data} />} />
+        <Route path="/dashboard" element={<Dashboard data={data} />} />
+        <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>

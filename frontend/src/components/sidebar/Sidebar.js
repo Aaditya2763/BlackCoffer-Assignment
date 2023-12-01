@@ -11,6 +11,7 @@ import {BsGlobeCentralSouthAsia} from 'react-icons/bs'
 import {GiPestleMortar} from 'react-icons/gi'
 import {BiSolidCity} from 'react-icons/bi'
 import DropdownBox from '../dropdown/DropdownBox';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = ({dropboxdata,onYearChange,onCityChange,onSourceChange,onPestsChange,onTopicChange,onSectorChange,onRegionChange,onCountryChange}) => {
@@ -28,7 +29,7 @@ const [city,setCity]=useState([]);
     setIsOpen(!isOpen);
    
   };
-  console.log(country)
+  
   useEffect(() => {
    //we are getting array of objects  that is why first we will map it to get array of years
    const yeardata=dropboxdata.map(years=>years.added)
@@ -171,7 +172,7 @@ setCity(uniqueCity);
           <DropdownBox optionBoxHandler={isOpen}
         title="City"  data={city} /></div> */}
      
-      <div  className="logoutBtn" ><SlLogout className='icon'/>{isOpen? <span style={{marginLeft:10}}>Logout</span>:""}</div>
+      <div  className="logoutBtn" ><SlLogout className='icon' onClick={toggleSidebar}/>{isOpen? <span style={{marginLeft:10}}><Link to="/login" style={{color:'white',textDecoration:'none'}}> Logout</Link></span>:""}</div>
 
       </div>
       

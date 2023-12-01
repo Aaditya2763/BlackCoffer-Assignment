@@ -28,7 +28,7 @@ function Navbar() {
       </div>
       <div>
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <  Link to="/" className="nav-link" onClick={handleLinkClick}>
+        <  Link to="/dashboard" className="nav-link" onClick={handleLinkClick}>
           <div><MdSpaceDashboard style={{fontSize:25}}/></div>
           <div>Dashboard</div>
           </Link>
