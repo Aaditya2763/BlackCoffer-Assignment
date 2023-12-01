@@ -7,20 +7,24 @@ const cors=require('cors')
 const connectDB=require('./database/connectdb');
 const seeddb=require('./seed');
 app.use(express.urlencoded({extended:true}));
+const bodyParser = require("body-parser");
 app.use(express.json());
-const corsOptions = {
-    origin: 'http://localhost:3000', // Replace with your allowed origin(s)
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    // credentials: true, // Set to true if you're dealing with cookies or sessions
-    optionsSuccessStatus: 204, // Some legacy browsers (IE11) may not handle 200
-  };
-  
-  app.use(cors(corsOptions));
-  
+
 
 
 connectDB();
 seeddb();
+
+const corsOptions = {
+  origin: 'https://blackcoffer-backend-70p0.onrender.com', // Replace with your allowed origin(s)
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  // credentials: true, // Set to true if you're dealing with cookies or sessions
+  optionsSuccessStatus: 204, // Some legacy browsers (IE11) may not handle 200
+};
+
+app.use(cors(corsOptions));
+app.use(express.json()); // Parse JSON request bodies
+app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded request bodies
 const productRoutes=require('./routes/productsRoutes')
 const userRoutes=require('./routes/userRoutes')
 const port=5000;
