@@ -23,7 +23,7 @@ const App = () => {
     // Define an async function to fetch data
     async function fetchData() {
       try {
-        const response = await axios.get('http://localhost:5000/products/productsdata', {
+        const response = await axios.get('https://blackcoffer-backend-70p0.onrender.com/products/productsdata', {
           timeout: 5000, // Set a timeout of 5 seconds (5000 milliseconds)
           
         });

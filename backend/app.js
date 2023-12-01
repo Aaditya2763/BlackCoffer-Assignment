@@ -16,7 +16,7 @@ connectDB();
 seeddb();
 
 const corsOptions = {
-  origin: 'https://blackcoffer-backend-70p0.onrender.com', // Replace with your allowed origin(s)
+  origin: 'https://black-coffer-assignment-eight.vercel.app/', // Replace with your allowed origin(s)
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   // credentials: true, // Set to true if you're dealing with cookies or sessions
   optionsSuccessStatus: 204, // Some legacy browsers (IE11) may not handle 200
