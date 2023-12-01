@@ -16,7 +16,7 @@ connectDB();
 seeddb();
 
 const corsOptions = {
-     origin: ["https://live-demo-woad.vercel.app","http://localhost:3000"], // Some legacy browsers (IE11) may not handle 200
+     origin: ["https://black-coffer-assignment-eight.vercel.app","http://localhost:3000"], // Some legacy browsers (IE11) may not handle 200
 };
 
 app.use(cors(corsOptions));
